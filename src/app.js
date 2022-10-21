@@ -7,7 +7,7 @@ const port = 8080;
 app.use(express.json());
 
 app.get('/', async (req, res) => {
-    const teste = await runQuery(`describe database`);
+    const teste = await runQuery(`select * from teste`);
 
     res.send(teste);
 })
