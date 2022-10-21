@@ -2,11 +2,17 @@
 
 Este projeto tem como objetivo mostrar a base para se desenvolver uma API
 
-# Seção dedicada a estudantes da PUCC
+## Configuração do .env
+
+O arquivo `.env` é utilizado para definir variáveis de ambiente.
+
+Dentro do arquivo `.env.example` existe a base de variáveis da conexão com o banco de dados, você deve inserir seus dados, copiar e criar um `.env` no root do projeto.
+
+## Seção dedicada a estudantes da PUCC
 
 Para realizar a conexão com o banco de dados da PUC você deve baixar os seguintes items:
 - [Oracle Instant Client](https://www.oracle.com/br/database/technologies/instant-client/winx64-64-downloads.html)
-- [Fortinet VPN](https://www.fortinet.com/br/support/product-downloads)
+- [Fortinet VPN](https://www.fortinet.com/br/support/product-downloads) (CASO NÃO ESTEJA EM UMA MÁQUINA DA PUCC)
 
 Você deve conectar a VPN com a PUCC.
 
@@ -23,4 +29,5 @@ Após esse procedimento você deve adicionar essa rota à variável de ambiente 
 Com isso estamos prontos para desenvolver!
 
 Caso dê algum erro:
-- Reinicie o console aberto antes da adição do *oracle instant client* no *PATH*
+- Reinicie todos os consoles abertos e editores de código antes da adição do *oracle instant client* no *PATH*
+
