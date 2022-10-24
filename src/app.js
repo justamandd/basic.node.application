@@ -1,10 +1,12 @@
 require('../db.connection');
+const cors = require('cors');
 const express = require('express');
 const app = express();
 const port = 8080;
 
 const usersController = require('./controllers/users.controller');
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/', async (req, res) => {
