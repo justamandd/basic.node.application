@@ -1,10 +1,9 @@
-require('dotenv').config();
 require('../db.connection');
 const express = require('express');
 const app = express();
 const port = 8080;
 
-const usuariosController = require('./controllers/usuarios.controller');
+const usersController = require('./controllers/users.controller');
 
 app.use(express.json());
 
@@ -12,66 +11,64 @@ app.get('/', async (req, res) => {
     res.send('Você está acessando a API!');
 })
 
-app.get('/usuarios', async (req, res, next) => {
+app.get('/users', async (req, res, next) => {
     try {
-        const usuarios = await usuariosController.list('usuario').then(res => res);
+        const users = await usersController.list('users').then(res => res);
 
-        res.send(usuarios.rows);    
+        res.send(users.rows);    
     } catch (error) {
         next(error)
     }
 });
 
-app.get('/usuarios/:nome', async (req, res, next) => {
-    const { nome } = req.params;
+app.get('/users/:name', async (req, res, next) => {
+    const { name } = req.params;
 
     try {
-        const usuario = await usuariosController.search('usuario', nome).then(res => res);
+        const user = await usersController.search('users', name).then(res => res);
 
-        res.send(usuario.rows[0]);    
+        res.send(user.rows[0]);    
     } catch (error) {
         next(error)
     }
 });
 
-app.post('/usuarios', async (req, res, next) => {
-    const { id, nome } = req.body;
+app.post('/users', async (req, res, next) => {
+    const { id, name } = req.body;
 
     try {
-        const usuario = await usuariosController.insert('usuario', { id, nome }).then(res => res);
+        const user = await usersController.insert('users', { id, name }).then(res => res);
         
-        res.send(usuario.rows[0]);
+        res.send(user.rows[0]);
     } catch (error) {
         
     }
 
 });
 
-app.put('/usuarios/:id', async (req, res, next) => {
+app.put('/users/:id', async (req, res, next) => {
     try {
         const { id } = req.params;
-        const { nome } = req.body;
+        const { name } = req.body;
 
-        const usuario = await usuariosController.update('usuario', { id, nome }).then(res => res);
+        const user = await usersController.update('users', { id, name }).then(res => res);
 
-        res.send(usuario.rows[0]);
+        res.send(user.rows[0]);
     } catch (error) {
         next(error);
     }
 });
 
-app.delete('/usuarios/:id', async (req, res, next) => {
+app.delete('/users/:id', async (req, res, next) => {
     try {
         const { id } = req.params;
 
-        const usuario = await usuariosController.delete('usuario', id).then(res => res);
+        const user = await usersController.delete('users', id).then(res => res);
 
-        res.send(usuario);
+        res.send(user);
     } catch (error) {
         next(error);
     }
 })
-
-
 
 app.listen(port, () => console.log('App running on port http://localhost:' + port));
