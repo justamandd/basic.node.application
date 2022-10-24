@@ -43,7 +43,8 @@ Você deve conectar a VPN com a PUCC.
 
 `npm install` para instalar dependências (express, nodemon, oracledb, dotenv).
 
-`node src\migrations\usuarios.migration.js` para gerar a tabela no banco de dados.
+`node src\migrations\users.migration.js` para gerar a tabela no banco de dados.
+`node src\migrations\users.rollback.migration.js` *CASO PRECISE DELETAR A TABELA DO BANCO*
 
 Para rodar o `Nodemon` você deve abrir Windows Power Shell como Administrador e rodar `Set-ExecutionPolicy Unrestricted` e selecionar a opção `A`.
 
