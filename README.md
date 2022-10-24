@@ -2,19 +2,20 @@
 
 Este projeto tem como objetivo mostrar a base para se desenvolver uma API
 
+### Baixar
+
+- [Insomnia](https://insomnia.rest/download)
+
 ## Configuração do .env
 
 O arquivo `.env` é utilizado para definir variáveis de ambiente.
 
-Dentro do arquivo `.env.example` existe a base de variáveis da conexão com o banco de dados, você deve inserir seus dados, copiar e criar um `.env` no root do projeto.
+Dentro do arquivo `.env.example` existe um exemplo de como criar um `.env` para a conexão com o banco de dados, você deve inserir seus dados, copiar e criar um `.env` no root do projeto (caso não tenha alterado o nome da pasta será basic.node.application).
 
-## Seção dedicada a estudantes da PUCC
+## Banco de dados Remoto
 
-Para realizar a conexão com o banco de dados da PUC você deve baixar os seguintes items:
+Baixar:
 - [Oracle Instant Client](https://www.oracle.com/br/database/technologies/instant-client/winx64-64-downloads.html)
-- [Fortinet VPN](https://www.fortinet.com/br/support/product-downloads) (CASO NÃO ESTEJA EM UMA MÁQUINA DA PUCC)
-
-Você deve conectar a VPN com a PUCC.
 
 O Oracle Instant Client deve ser extraído em C:\oracle, caso não tenha uma pasta oracle no C: basta criá-la. O path deverá ficar parecido com esse: `C:\oracle\instantclient_21_7`
 
@@ -31,3 +32,21 @@ Com isso estamos prontos para desenvolver!
 Caso dê algum erro:
 - Reinicie todos os consoles abertos e editores de código antes da adição do *oracle instant client* no *PATH*
 
+## Seção dedicada a estudantes da PUCC
+
+Para realizar a conexão com o banco de dados da PUC você deve baixar os seguintes items:
+- [Fortinet VPN](https://www.fortinet.com/br/support/product-downloads) (CASO NÃO ESTEJA EM UMA MÁQUINA DA PUCC)
+
+Você deve conectar a VPN com a PUCC.
+
+## Alguns comandos a serem feitos
+
+`node src\migrations\usuarios.migration.js` para gerar a tabela no banco de dados
+
+Para roda o `Nodemon` você deve abrir Windows Power Shell como Administrador e rodar `Set-ExecutionPolicy Unrestricted` e selecionar a opção `A`.
+
+Para rodar o projeto em sí `npm run dev` ou `nodemon src/app.js`
+
+## Para testar as rotas você pode usar o Insomnia
+
+Esse é um bom vídeo para você [aprender](https://www.youtube.com/watch?v=gLpw0GSDYaw&ab_channel=OmniLabs) a usar o Insomnia
