@@ -6,8 +6,17 @@ const port = 8080;
 
 const usersController = require('./controllers/users.controller');
 
-app.use(cors());
+app.use(cors()); 
 app.use(express.json());
+
+/*
+Geração de código aleatório:
+
+slice(2) ==> código de 11 chars
+slice(13) ==> um único char
+
+ Math.random().toString(36).slice(2);
+*/
 
 app.get('/', async (req, res) => {
     res.send('Você está acessando a API!');
