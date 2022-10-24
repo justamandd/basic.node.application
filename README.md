@@ -41,7 +41,9 @@ Você deve conectar a VPN com a PUCC.
 
 ## Alguns comandos a serem feitos
 
-`node src\migrations\usuarios.migration.js` para gerar a tabela no banco de dados
+`npm install` para instalar dependências (express, nodemon, oracledb, dotenv).
+
+`node src\migrations\usuarios.migration.js` para gerar a tabela no banco de dados.
 
 Para rodar o `Nodemon` você deve abrir Windows Power Shell como Administrador e rodar `Set-ExecutionPolicy Unrestricted` e selecionar a opção `A`.
 
@@ -49,4 +51,4 @@ Para rodar o projeto em sí `npm run dev` ou `nodemon src/app.js`
 
 ## Para testar as rotas você pode usar o Insomnia
 
-Esse é um bom vídeo para você [aprender](https://www.youtube.com/watch?v=gLpw0GSDYaw&ab_channel=OmniLabs) a usar o Insomnia
+Esse é um bom vídeo para você [aprender](https://www.youtube.com/watch?v=gLpw0GSDYaw&ab_channel=OmniLabs) a usar o Insomnia.
