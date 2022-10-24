@@ -43,7 +43,7 @@ Você deve conectar a VPN com a PUCC.
 
 `node src\migrations\usuarios.migration.js` para gerar a tabela no banco de dados
 
-Para roda o `Nodemon` você deve abrir Windows Power Shell como Administrador e rodar `Set-ExecutionPolicy Unrestricted` e selecionar a opção `A`.
+Para rodar o `Nodemon` você deve abrir Windows Power Shell como Administrador e rodar `Set-ExecutionPolicy Unrestricted` e selecionar a opção `A`.
 
 Para rodar o projeto em sí `npm run dev` ou `nodemon src/app.js`
 
